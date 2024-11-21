@@ -3,6 +3,7 @@ Feature: Login
   Background:
     Given Go to page
 
+  @smoke
   Scenario Outline: Login with rest of the users
     When User enters '<user>' credentials
     Then User is logged in
@@ -17,7 +18,6 @@ Feature: Login
       |visual_user             |
       |standard_user           |
 
-  @smoke
   Scenario: Login fail
     When User enters 'locked_out_user' credentials
     And User is on 'login' page

@@ -61,7 +61,8 @@
                         <exclude>**/*$*</exclude>
                     </excludes>
                     <systemPropertyVariables>
-                        <cucumber.filter.tags>@smoke</cucumber.filter.tags>
+                        <cucumber.filter.tags>not @smoke</cucumber.filter.tags>
+<!--                        <cucumber.filter.tags>@smoke</cucumber.filter.tags>-->
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

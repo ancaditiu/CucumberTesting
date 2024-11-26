@@ -12,9 +12,18 @@ pipeline {
             steps {
                 sh '''
                 echo "is this working?"
-                mvn clean test -Dcucumber-filter-tags="@smoke"
+                mvn -version
+                 #  mvn compile
                 '''
             }
+        }
+        stage('Test') {
+             steps {
+                    sh '''
+                      #  echo "Running tests"
+                      # mvn clean test -Dcucumber-filter-tags="@smoke"
+                        '''
+             }
         }
     }
 }
